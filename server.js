@@ -33,4 +33,5 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || 3000, () => console.log('Proxy running'));
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, '0.0.0.0', () => console.log('Proxy running on port ' + PORT));
